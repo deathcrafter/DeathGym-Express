@@ -57,7 +57,14 @@ let pendingRequests = [];
 connectMongo().catch(err => { console.log(err) })
 
 async function connectMongo() {
-    await mongoose.connect('mongodb://localhost:27017/gymMemberReqs');
+    const auth = require('./mongoauth.json')
+
+    let user = auth.user;
+    let pwd = encodeURIComponent(auth.pwd);
+
+    //console.log(user, pwd)
+
+    await mongoose.connect(`mongodb://${user}:${pwd}@${host}:27017/gymMemberReqs?authSource=admin`);
 }
 
 var db = mongoose.connection;
