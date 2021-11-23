@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{title}
+        link(rel="stylesheet", href="static/style.css")
+    body 
+        - var curr = '/'
+        include common.pug
+        
+        div#content
+            h1 Get membership for 60% off now! 
+
+            form(action="", method="post") 
+                input.inputC(type="text", name="name" placeholder="John Roberts")
+                input.inputC(type="email", name="email" placeholder="johnroberts@example.com")
+                input.inputC(type="number", name="number" placeholder="+447911123456")
+                textarea.inputC(type="address", name="address" placeholder="9th Street, Birmingham")
+                button(type="submit") Submit

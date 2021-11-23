@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+
+/* CSS RESET */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* BACKGROUND */
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('/static/bg3.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* NAVBAR */
+#nav{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    backdrop-filter: blur(6px) brightness(1.15);
+}
+
+#nav ul{
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+}
+
+#nav ul li{
+    margin: 10px 10px;
+    list-style: none;
+    display: block;
+    align-items: center;
+}
+
+#nav ul li a{
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: rgb(51, 168, 170, 0);
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    transition-duration: 500ms;
+}
+
+#nav .currentPage{
+    background-color: rgba(51, 168, 170, 0.425);
+}
+
+#nav ul li a:hover{
+    background-color: rgb(51, 168, 170, 0.85);
+}
+
+/* CONTACT */
+#content{
+    margin: 15vh auto;
+    max-width: 700px;
+    min-width: 450px;
+    backdrop-filter: blur(6px) brightness(1.15);
+    padding: 3vh 3vw;
+    border-radius: 10px;
+}
+
+#content h1{
+    font-size: 2rem;
+    text-align: center;
+    color: blanchedalmond;
+}
+
+#content form{
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: auto minmax(350px, 400px) auto;
+    grid-gap: 10px;
+}
+
+#content .inputC{
+    display: block;
+    grid-column: 2;
+    border:none;
+    border-radius: 5px;
+    font-size: 1.05rem;
+    text-align: center;
+    padding: 2px 0;
+}
+
+#content textarea{
+    resize: none;
+}
+
+#content form button{
+    display: block;
+    margin: 0 auto;
+    padding: 2px;
+    grid-column: 2;
+    min-width: 200px;
+    max-width: 300px;
+    border:none;
+    border-radius: 5px;
+    font-size: 1.05rem;
+    background-color: rgb(51, 168, 170, 0.5);
+    color: whitesmoke;
+    transition-duration: 500ms;
+}
+
+#content form button:hover{
+    background-color: rgb(51, 168, 170, 0.95);
+    cursor: pointer;
+    text-shadow: 0 0 7px;
+}
