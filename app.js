@@ -41,11 +41,11 @@ app.get("/contact", (req, res) => {
 
 
 // CONNECTION
-
-const port = 80;
+const host = "68.183.83.187";
+const port = 3000;
 
 app.listen(port, () => {
-    console.log(`The app started success fully on localhost:${port}`);
+    console.log(`The app started success fully on ${host}:${port}`);
 });
 
 // MONGODB CONFIG
